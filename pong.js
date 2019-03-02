@@ -5,7 +5,6 @@
 // Description: Little pong game using Javascript & HTML5 Canvas
 //---------------------------------------------------------------------
 
-
 const WINNING_SCORE = 10;
 const PADDLE_WIDTH = 12;
 const PADDLE_HEIGHT = 60;
@@ -36,7 +35,6 @@ var computerRandomBehavior = 250;
 
 var gameOver = false;
 var keys = [];
-
 
 // Init
 window.addEventListener('load', init, false);
@@ -95,6 +93,7 @@ function drawPlayer() {
             playerVelocity--;
         }
     }
+    
     if (keys[40]) {
         if (playerVelocity < playerMaxSpeed) {
             playerVelocity++;
@@ -123,8 +122,6 @@ function drawComputer() {
 }
 
 function computerAI(){
-
-  console.log(computerRandomBehavior)
 
   var computerCenter = computerY + (PADDLE_HEIGHT / 2);
 
@@ -355,10 +352,6 @@ function checkComputerSide(){
     computerTurn = false;
   }
 
-
-
-
-
   // computer missing the ball
  if (ballX > canvas.width) {
    playerScore++;
@@ -377,7 +370,6 @@ function restart(e) {
         playerScore = 0;
         computerScore = 0;
         gameOver = false;
-
     }
 }
 
